@@ -5,6 +5,8 @@ import Notification from './components/Notification/Notification.jsx';
 import Description from './components/Description/Description.jsx';
 import './App.css';
 
+
+
 const App = () => {
   const [feedback, setFeedback] = useState({
     good: 0,
@@ -43,8 +45,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Sip Happens Café</h1>
-      <Description text="Please leave your feedback about our service by selecting one of the options below." /> {}
+      <Description title="Sip Happens Café" text="Please leave your feedback about our service by selecting one of the options below." /> {}
       <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback={totalFeedback} />
       {totalFeedback > 0 ? (
         <Feedback feedback={feedback} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} />
